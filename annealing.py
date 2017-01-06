@@ -1,3 +1,5 @@
+#  Grant Gollier (c)2016
+
 from lunch_opti import *
 import numpy as np
 import random
@@ -37,8 +39,8 @@ def acceptance_probability(old_cost, new_cost, T):
 
 def anneal(solution):
     old_cost = solution[0]
-    T = 9.0
-    T_min = 0.1
+    T = 2
+    T_min = 0.01
     alpha = 0.5
     while T > T_min:
         i = 1

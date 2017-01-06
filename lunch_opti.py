@@ -7,7 +7,7 @@ import pandas as pd
 
 class Table:
     teacher = str
-    seats = 8
+    seats = 5
     number = int
     students = np.array([])
 
@@ -120,12 +120,12 @@ def main(seed, tables, students):
         # for j in i.students:
         #     print(j.name)
         average += calculateDiversity(i.students, students)
-        toosmall = i.students.shape[0] <= 7
+        # toosmall = i.students.shape[0] <= 7
     # print(total)
     if total < students.shape[0]:
         average = 0
-    elif toosmall:
-        average = (average / (tables.shape[0] + 1)) - 0.5
+    # elif toosmall:
+    #     average = 0
     else:
         average = average / (tables.shape[0] + 1)
     # print(average)
